@@ -1,0 +1,16 @@
+---
+
+# Redhat OS family vars
+
+_base_packages_items:
+  - name: 'acl'
+  - name: 'curl'
+  - name: 'dstat'
+  - name: 'git'
+  - name: 'iotop'
+  - name: 'mtr'
+  - name: 'sysstat'
+  - name: 'tree'
+  - name: 'vim-enhanced'
+  - name: 'yum-cron'
+  - name: 'yum-utils'

@@ -1,0 +1,20 @@
+---
+
+# RedHat family install tasks
+
+- name: 'INSTALL | YUM | Remove packages'
+  become: True
+  yum:
+    name: "{{ item.name }}"
+    state: 'absent'
+  loop: "{{ base_packages_items }}"
+  when: "item.state | default('present') == 'absent'"
+
+
+- name: 'INSTALL | YUM | Install packages'
+  become: True
+  yum:
+    name: "{{ item.name }}"
+    state: 'present'
+  loop: "{{ base_packages_items }}"
+  when: "item.state | default('present') == 'present'"
